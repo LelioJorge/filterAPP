@@ -22,7 +22,9 @@ class NetworkApi {
         let endpoint = URL(string: urlPath)
         URLSession.shared.dataTask(with: endpoint!) { (data, response, error) in
             do {
-                guard let data = data else {return}
+                guard let data = data else {
+                    throw JSONError.NoData
+                }
                 guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] else {
                     throw JSONError.ConversionFailed
                 }

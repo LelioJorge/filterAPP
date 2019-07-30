@@ -10,11 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
     let api = NetworkApi()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         api.jsonParser()
         print("Eae")
+        
     }
 
 

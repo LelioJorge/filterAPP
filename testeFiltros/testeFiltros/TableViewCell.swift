@@ -16,7 +16,7 @@ class TableViewCell: UITableViewCell {
     
     var name: String? {
         didSet{
-            textLabel!.text = self.name
+            nameMusic!.text = self.name
         }
     }
     

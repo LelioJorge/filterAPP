@@ -15,6 +15,7 @@
 		CFAA4BA622F0C60E00703952 /* TablewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA4BA522F0C60E00703952 /* TablewViewController.swift */; };
 		CFAA4BA822F0C62000703952 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA4BA722F0C62000703952 /* TableViewCell.swift */; };
 		CFAA4BAC22F0D3CF00703952 /* NetworkApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA4BAB22F0D3CF00703952 /* NetworkApi.swift */; };
+		CFAA4BAE22F0F03C00703952 /* traks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA4BAD22F0F03C00703952 /* traks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		CFAA4BA522F0C60E00703952 /* TablewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablewViewController.swift; sourceTree = "<group>"; };
 		CFAA4BA722F0C62000703952 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		CFAA4BAB22F0D3CF00703952 /* NetworkApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkApi.swift; sourceTree = "<group>"; };
+		CFAA4BAD22F0F03C00703952 /* traks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = traks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +65,13 @@
 				CFAA4B9322F0C5CE00703952 /* AppDelegate.swift */,
 				CFAA4B9522F0C5CE00703952 /* ViewController.swift */,
 				CFAA4BA522F0C60E00703952 /* TablewViewController.swift */,
+				CFAA4BAD22F0F03C00703952 /* traks.swift */,
 				CFAA4BA722F0C62000703952 /* TableViewCell.swift */,
+				CFAA4BAB22F0D3CF00703952 /* NetworkApi.swift */,
 				CFAA4B9722F0C5CE00703952 /* Main.storyboard */,
 				CFAA4B9A22F0C5D000703952 /* Assets.xcassets */,
 				CFAA4B9C22F0C5D000703952 /* LaunchScreen.storyboard */,
 				CFAA4B9F22F0C5D000703952 /* Info.plist */,
-				CFAA4BAB22F0D3CF00703952 /* NetworkApi.swift */,
 			);
 			path = testeFiltros;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFAA4BAC22F0D3CF00703952 /* NetworkApi.swift in Sources */,
+				CFAA4BAE22F0F03C00703952 /* traks.swift in Sources */,
 				CFAA4BA622F0C60E00703952 /* TablewViewController.swift in Sources */,
 				CFAA4BA822F0C62000703952 /* TableViewCell.swift in Sources */,
 				CFAA4B9622F0C5CE00703952 /* ViewController.swift in Sources */,

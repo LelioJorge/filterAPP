@@ -7,7 +7,12 @@
 //
 
 import Foundation
-
+struct TrackStruct {
+    var id: String?
+    var name: String?
+    var data: String?
+    var genre: String?
+}
 class NetworkApi {
     
     
@@ -17,24 +22,34 @@ class NetworkApi {
         case ConversionFailed = "ERROR: conversion from JSON failed"
     }
     
-    func jsonParser() {
+    func jsonParser() -> Album?{
+        let result = Album()
         let urlPath = "https://api.deezer.com/album/302127"
         let endpoint = URL(string: urlPath)
         URLSession.shared.dataTask(with: endpoint!) { (data, response, error) in
+            let decoder = JSONDecoder()
             do {
                 guard let data = data else {
                     throw JSONError.NoData
                 }
-                guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] else {
+                guard (try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any]) != nil else {
                     throw JSONError.ConversionFailed
                 }
-                print(json["release_date"]!)
+                let result = try decoder.decode(Album.self, from: data)
+                
+                
+                
             } catch let error as JSONError {
                 print(error.rawValue)
             } catch let error as NSError {
                 print(error.debugDescription)
             }
             }.resume()
+        
+        print(result,"result")
+        return result
     }
+    
+   
     
 }

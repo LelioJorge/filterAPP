@@ -7,10 +7,10 @@
 //
 
 import Foundation
-class traks {
-    var id: String
-    var name: String
-    var data: String
-    var genre: String
+class Track {
+    var id: String?
+    var name: String?
+    var data: String?
+    var genre: String?
     
 }

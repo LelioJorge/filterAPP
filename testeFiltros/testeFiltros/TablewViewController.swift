@@ -9,14 +9,20 @@
 import UIKit
 
 
+
 class TableViewController: UITableViewController {
+    let api1 = NetworkApi()
+
     
     
-    
-    let arryTraks: [traks] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+            //let resutado: = self.api1.jsonParser()
+        
+        print(self.api1.jsonParser(),"4")
+        sleep(3000)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -25,10 +31,12 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell
-        
+        let album = api1.jsonParser()
+        print(album,"2")
         cell?.name = "ok"
         return cell!
     }
+    
 }
 
 

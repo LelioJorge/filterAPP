@@ -22,8 +22,7 @@ class NetworkApi {
         case ConversionFailed = "ERROR: conversion from JSON failed"
     }
     
-    func jsonParser() -> Album?{
-        let result = Album()
+    func jsonParser(completion: @escaping (Album) -> Void) {
         let urlPath = "https://api.deezer.com/album/302127"
         let endpoint = URL(string: urlPath)
         URLSession.shared.dataTask(with: endpoint!) { (data, response, error) in
@@ -36,18 +35,15 @@ class NetworkApi {
                     throw JSONError.ConversionFailed
                 }
                 let result = try decoder.decode(Album.self, from: data)
-                
-                
+                completion(result)
+
                 
             } catch let error as JSONError {
                 print(error.rawValue)
             } catch let error as NSError {
                 print(error.debugDescription)
             }
-            }.resume()
-        
-        print(result,"result")
-        return result
+        }.resume()
     }
     
    

@@ -16,23 +16,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        api.jsonParser(completion: receiveAlbum)
+//        api.jsonParser(completion: receiveAlbum)
     }
     
-    func receiveAlbum(_ playlist: Playlist) {
-        self.playlists.append(playlist)
-    }
+//    func receiveAlbum(_ playlist: Playlist) {
+//        self.playlists.append(playlist)
+//        
+//    }
 
     @IBAction func nextScreen(_ sender: Any) {
         performSegue(withIdentifier: "passPlaylistData", sender: self)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "passPlaylistData" {
-            let destVC = segue.destination as! TableViewController
-            destVC.playlists = self.playlists
-        }
-    }
     
 }
 

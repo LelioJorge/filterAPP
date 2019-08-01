@@ -20,27 +20,32 @@ class NetworkApi {
     func jsonParser(completion: @escaping (Playlist) -> Void) {
         let urlPath = "https://api.deezer.com/playlist/908622995"
         let endpoint = URL(string: urlPath)
-        URLSession.shared.dataTask(with: endpoint!) { (data, response, error) in
-            let decoder = JSONDecoder()
-            do {
-                guard let data = data else {
-                    throw JSONError.NoData
+        DispatchQueue.global().async {
+            URLSession.shared.dataTask(with: endpoint!) { (data, response, error) in
+                let decoder = JSONDecoder()
+                do {
+                    guard let data = data else {
+                        throw JSONError.NoData
+                    }
+                    guard (try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any]) != nil else {
+                        throw  JSONError.ConversionFailed
+                    }
+                    let result = try decoder.decode(Playlist.self, from: data)
+                    completion(result)
+                    
+                    DispatchQueue.main.async {
+                        
+                    }
+                    
+                } catch let error as JSONError {
+                    print(error.rawValue)
+                } catch let error as NSError {
+                    print(error.debugDescription)
                 }
-                guard (try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any]) != nil else {
-                    throw JSONError.ConversionFailed
-                }
-                let result = try decoder.decode(Playlist.self, from: data)
-                completion(result)
-
-                
-            } catch let error as JSONError {
-                print(error.rawValue)
-            } catch let error as NSError {
-                print(error.debugDescription)
-            }
-        }.resume()
+                }.resume()
+        }
+        
     }
     
    
-    
 }

@@ -13,25 +13,17 @@ import UIKit
 class TableViewController: UITableViewController {
     let api1 = NetworkApi()
 
-    var albums = [Album]()
+    var playlists = [Playlist]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            //let resutado: = self.api1.jsonParser()
+
         api1.jsonParser(completion: receiveAlbum)
-//        api1.jsonParser(completion: {
-//            self.albums.append(album)
-//            DispatchQueue.main.async {
-//                self.tableView.reloadData()
-//            }
-//        })
-//        [1, 2, 3].forEach({ print($0) })
-        
     }
     
-    func receiveAlbum(_ album: Album) {
-        self.albums.append(album)
+    func receiveAlbum(_ playlist: Playlist) {
+        self.playlists.append(playlist)
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
@@ -42,14 +34,15 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.albums.count
+        return self.playlists.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell
         
-        let album = self.albums[indexPath.row]
-        cell?.name = album.title
+        let playlist = self.playlists[indexPath.row]
+        let data = playlist.tracks.data[0].artist.name
+        cell?.name = data
         return cell!
     }
     

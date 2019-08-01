@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CF343D8022F2037600400BCA /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF343D7F22F2037600400BCA /* Album.swift */; };
+		CF343D8022F2037600400BCA /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF343D7F22F2037600400BCA /* Playlist.swift */; };
 		CFAA4B9422F0C5CE00703952 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA4B9322F0C5CE00703952 /* AppDelegate.swift */; };
 		CFAA4B9622F0C5CE00703952 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA4B9522F0C5CE00703952 /* ViewController.swift */; };
 		CFAA4B9922F0C5CE00703952 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFAA4B9722F0C5CE00703952 /* Main.storyboard */; };
@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CF343D7F22F2037600400BCA /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		CF343D7F22F2037600400BCA /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		CFAA4B9022F0C5CE00703952 /* testeFiltros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testeFiltros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFAA4B9322F0C5CE00703952 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFAA4B9522F0C5CE00703952 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 				CFAA4BA522F0C60E00703952 /* TablewViewController.swift */,
 				CFAA4BA722F0C62000703952 /* TableViewCell.swift */,
 				CFAA4BAB22F0D3CF00703952 /* NetworkApi.swift */,
-				CF343D7F22F2037600400BCA /* Album.swift */,
+				CF343D7F22F2037600400BCA /* Playlist.swift */,
 				CFAA4B9722F0C5CE00703952 /* Main.storyboard */,
 				CFAA4B9A22F0C5D000703952 /* Assets.xcassets */,
 				CFAA4B9C22F0C5D000703952 /* LaunchScreen.storyboard */,
@@ -152,7 +152,7 @@
 				CFAA4BA822F0C62000703952 /* TableViewCell.swift in Sources */,
 				CFAA4B9622F0C5CE00703952 /* ViewController.swift in Sources */,
 				CFAA4B9422F0C5CE00703952 /* AppDelegate.swift in Sources */,
-				CF343D8022F2037600400BCA /* Album.swift in Sources */,
+				CF343D8022F2037600400BCA /* Playlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

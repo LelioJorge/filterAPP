@@ -17,22 +17,23 @@ struct  Playlist: Decodable {
 }
 
 struct Tracks: Decodable {
-    var data: [Data]
+    var data: [trackData]
 }
-struct Data: Decodable {
+
+struct trackData: Decodable {
     var id: Int
     var title: String
     var artist: Artist
     var album: Album
     var type: String
-
 }
+
 struct Artist: Decodable {
     var id: Int
     var name: String
     var type: String
-
 }
+
 struct Album: Decodable {
     var id: Int
     var title: String

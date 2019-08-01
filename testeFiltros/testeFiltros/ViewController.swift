@@ -11,12 +11,28 @@ import UIKit
 class ViewController: UIViewController {
     let api = NetworkApi()
     
+    var playlists = [Playlist]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
+        api.jsonParser(completion: receiveAlbum)
+    }
+    
+    func receiveAlbum(_ playlist: Playlist) {
+        self.playlists.append(playlist)
     }
 
-
+    @IBAction func nextScreen(_ sender: Any) {
+        performSegue(withIdentifier: "passPlaylistData", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "passPlaylistData" {
+            let destVC = segue.destination as! TableViewController
+            destVC.playlists = self.playlists
+        }
+    }
+    
 }
 

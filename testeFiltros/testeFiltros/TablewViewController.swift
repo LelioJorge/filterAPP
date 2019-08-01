@@ -15,18 +15,9 @@ class TableViewController: UITableViewController {
 
     var playlists = [Playlist]()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        api1.jsonParser(completion: receiveAlbum)
-    }
-    
-    func receiveAlbum(_ playlist: Playlist) {
-        self.playlists.append(playlist)
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -34,13 +25,13 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return self.playlists[0].tracks.data.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell
         print(playlists[0].tracks.data.count)
-        let playlist = self.playlists[indexPath.row]
+        let playlist = self.playlists[0]
         let data = playlist.tracks.data[indexPath.row].artist.name
         cell?.name = data
         return cell!

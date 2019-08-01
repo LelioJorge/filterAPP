@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF1B8A0F22F36E3400839E97 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B8A0E22F36E3400839E97 /* CollectionViewController.swift */; };
+		CF1B8A1122F36E5400839E97 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B8A1022F36E5400839E97 /* CollectionViewCell.swift */; };
 		CF343D8022F2037600400BCA /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF343D7F22F2037600400BCA /* Playlist.swift */; };
 		CFAA4B9422F0C5CE00703952 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA4B9322F0C5CE00703952 /* AppDelegate.swift */; };
 		CFAA4B9622F0C5CE00703952 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA4B9522F0C5CE00703952 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF1B8A0E22F36E3400839E97 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		CF1B8A1022F36E5400839E97 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		CF343D7F22F2037600400BCA /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		CFAA4B9022F0C5CE00703952 /* testeFiltros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testeFiltros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFAA4B9322F0C5CE00703952 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 				CFAA4BA722F0C62000703952 /* TableViewCell.swift */,
 				CFAA4BAB22F0D3CF00703952 /* NetworkApi.swift */,
 				CF343D7F22F2037600400BCA /* Playlist.swift */,
+				CF1B8A0E22F36E3400839E97 /* CollectionViewController.swift */,
+				CF1B8A1022F36E5400839E97 /* CollectionViewCell.swift */,
 				CFAA4B9722F0C5CE00703952 /* Main.storyboard */,
 				CFAA4B9A22F0C5D000703952 /* Assets.xcassets */,
 				CFAA4B9C22F0C5D000703952 /* LaunchScreen.storyboard */,
@@ -149,8 +155,10 @@
 			files = (
 				CFAA4BAC22F0D3CF00703952 /* NetworkApi.swift in Sources */,
 				CFAA4BA622F0C60E00703952 /* TablewViewController.swift in Sources */,
+				CF1B8A1122F36E5400839E97 /* CollectionViewCell.swift in Sources */,
 				CFAA4BA822F0C62000703952 /* TableViewCell.swift in Sources */,
 				CFAA4B9622F0C5CE00703952 /* ViewController.swift in Sources */,
+				CF1B8A0F22F36E3400839E97 /* CollectionViewController.swift in Sources */,
 				CFAA4B9422F0C5CE00703952 /* AppDelegate.swift in Sources */,
 				CF343D8022F2037600400BCA /* Playlist.swift in Sources */,
 			);

@@ -34,14 +34,14 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.playlists.count
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell
-        
+        print(playlists[0].tracks.data.count)
         let playlist = self.playlists[indexPath.row]
-        let data = playlist.tracks.data[0].artist.name
+        let data = playlist.tracks.data[indexPath.row].artist.name
         cell?.name = data
         return cell!
     }

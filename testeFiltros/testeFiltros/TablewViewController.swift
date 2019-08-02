@@ -13,12 +13,7 @@ import UIKit
 class TableViewController: UITableViewController {
     let api1 = NetworkApi()
     
-    var playlists = [Playlist](){
-        didSet{
-            self.tableView.reloadData()
-    
-        }
-    }
+    var playlists = [Playlist]()
     static var shareTableViewController = TableViewController(style: .grouped)
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +27,7 @@ class TableViewController: UITableViewController {
 //    }
     func receiveAlbum(_ playlist: Playlist) {
         self.playlists.append(playlist)
+        self.tableView.reloadData()
         
     }
     override func numberOfSections(in tableView: UITableView) -> Int {

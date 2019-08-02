@@ -18,9 +18,10 @@ class CollectionViewCell: UICollectionViewCell {
 
     var id: Int?
 
-    var image: String? {
+    var image: Data? {
         didSet{
-            imageViewCell.image = UIImage(named: image!)
+            
+            imageViewCell.image = UIImage(data: image!)
             imageViewCell.layer.cornerRadius = imageViewCell.frame.height / 4.0
         }
     }
@@ -30,17 +31,6 @@ class CollectionViewCell: UICollectionViewCell {
             nameLabel.text = textName
         }
     }
-   
-//    init(id: Int, frame: CGRect) {
-////        self.collectionView = collectionView
-////        //Setup collectionView layout here and pass with init
-////        let layout = UICollectionViewLayout()
-//        self.id = id
-//        super.init(frame: frame)
-//    }
-//
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+
     
 }

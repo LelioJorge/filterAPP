@@ -8,14 +8,31 @@
 
 import Foundation
 
+struct User: Decodable {
+    var id: Int
+    var name: String
+    var picture_medium: String
+}
 
 
-struct  Playlist: Decodable {
+struct UserPlaylist: Decodable {
     var id: Int
     var title: String
     var tracks: Tracks
-    var type: String
+    var creator: Creator
 }
+struct Playlist: Decodable {
+    var id: Int
+    var title: String
+    var tracks: Tracks
+    var creator: Creator
+}
+
+struct Creator: Decodable {
+    var id: Int
+    var playlist: [Playlist]
+}
+
 
 struct Tracks: Decodable {
     var data: [trackData]

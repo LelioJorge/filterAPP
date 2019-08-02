@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86F77C2722F4CDC800701DCA /* PesquisaUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F77C2622F4CDC800701DCA /* PesquisaUserViewController.swift */; };
 		CF1B8A0F22F36E3400839E97 /* UserViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B8A0E22F36E3400839E97 /* UserViewControler.swift */; };
 		CF1B8A1122F36E5400839E97 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B8A1022F36E5400839E97 /* CollectionViewCell.swift */; };
 		CF343D8022F2037600400BCA /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF343D7F22F2037600400BCA /* Playlist.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		86F77C2622F4CDC800701DCA /* PesquisaUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PesquisaUserViewController.swift; sourceTree = "<group>"; };
 		CF1B8A0E22F36E3400839E97 /* UserViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewControler.swift; sourceTree = "<group>"; };
 		CF1B8A1022F36E5400839E97 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		CF343D7F22F2037600400BCA /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				CFAA4B9322F0C5CE00703952 /* AppDelegate.swift */,
 				CFAA4B9522F0C5CE00703952 /* ViewController.swift */,
 				CFAA4BA522F0C60E00703952 /* TablewViewController.swift */,
+				86F77C2622F4CDC800701DCA /* PesquisaUserViewController.swift */,
 				CFAA4BA722F0C62000703952 /* TableViewCell.swift */,
 				CFAA4BAB22F0D3CF00703952 /* NetworkApi.swift */,
 				CF343D7F22F2037600400BCA /* Playlist.swift */,
@@ -154,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86F77C2722F4CDC800701DCA /* PesquisaUserViewController.swift in Sources */,
 				CFAA4BAC22F0D3CF00703952 /* NetworkApi.swift in Sources */,
 				CFAA4BA622F0C60E00703952 /* TablewViewController.swift in Sources */,
 				CF1B8A1122F36E5400839E97 /* CollectionViewCell.swift in Sources */,

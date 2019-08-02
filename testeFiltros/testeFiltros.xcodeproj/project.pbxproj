@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CF1B8A0F22F36E3400839E97 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B8A0E22F36E3400839E97 /* CollectionViewController.swift */; };
+		CF1B8A0F22F36E3400839E97 /* UserViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B8A0E22F36E3400839E97 /* UserViewControler.swift */; };
 		CF1B8A1122F36E5400839E97 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B8A1022F36E5400839E97 /* CollectionViewCell.swift */; };
 		CF343D8022F2037600400BCA /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF343D7F22F2037600400BCA /* Playlist.swift */; };
 		CFA0E4BB22F39314007D2FDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA0E4B922F39314007D2FDD /* Main.storyboard */; };
@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CF1B8A0E22F36E3400839E97 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		CF1B8A0E22F36E3400839E97 /* UserViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewControler.swift; sourceTree = "<group>"; };
 		CF1B8A1022F36E5400839E97 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		CF343D7F22F2037600400BCA /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		CFA0E4BA22F39314007D2FDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 				CFAA4BA722F0C62000703952 /* TableViewCell.swift */,
 				CFAA4BAB22F0D3CF00703952 /* NetworkApi.swift */,
 				CF343D7F22F2037600400BCA /* Playlist.swift */,
-				CF1B8A0E22F36E3400839E97 /* CollectionViewController.swift */,
+				CF1B8A0E22F36E3400839E97 /* UserViewControler.swift */,
 				CF1B8A1022F36E5400839E97 /* CollectionViewCell.swift */,
 				CFA0E4B922F39314007D2FDD /* Main.storyboard */,
 				CFAA4B9A22F0C5D000703952 /* Assets.xcassets */,
@@ -159,7 +159,7 @@
 				CF1B8A1122F36E5400839E97 /* CollectionViewCell.swift in Sources */,
 				CFAA4BA822F0C62000703952 /* TableViewCell.swift in Sources */,
 				CFAA4B9622F0C5CE00703952 /* ViewController.swift in Sources */,
-				CF1B8A0F22F36E3400839E97 /* CollectionViewController.swift in Sources */,
+				CF1B8A0F22F36E3400839E97 /* UserViewControler.swift in Sources */,
 				CFAA4B9422F0C5CE00703952 /* AppDelegate.swift in Sources */,
 				CF343D8022F2037600400BCA /* Playlist.swift in Sources */,
 			);

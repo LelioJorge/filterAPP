@@ -8,9 +8,7 @@
 
 import Foundation
 
-class NetworkApi {
-    
-    
+class NetworkApi {   
     
     enum JSONError: String, Error {
         case NoData = "ERROR: no data"
@@ -44,8 +42,5 @@ class NetworkApi {
                 }
                 }.resume()
         }
-        
     }
-    
-   
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 class UserViewControler: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    
+   
    
     @IBOutlet weak var searchCollectionView: UICollectionView!
     

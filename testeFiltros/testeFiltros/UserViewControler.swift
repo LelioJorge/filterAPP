@@ -17,12 +17,7 @@ class UserViewControler: UIViewController, UICollectionViewDelegate, UICollectio
     let apiSearch = NetworkApi()
     var users = [User]()
     var searchUser = [User]()
-    /*
-     1 primerio eu tenho que saber o que ele ta digitaando
-     2 depois eu tenho que fazer a resquest do que ele digitou
-     3 colocamos no array
-    
- */
+
 //        didSet{
 //            self.searchCollectionView.reloadData()
 //        }

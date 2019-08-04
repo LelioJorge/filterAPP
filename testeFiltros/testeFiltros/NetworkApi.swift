@@ -84,7 +84,10 @@ class NetworkApi {
     }
     
     func taskUser(urlPath: String,completion: @escaping (UserData) -> Void) {
-        let endpoint = URL(string: urlPath)
+        guard let urlString = urlPath.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
+        let endpoint = URL(string: urlString)
+        
+
         URLSession.shared.dataTask(with: endpoint!) { (data, response, error) in
             let decoder = JSONDecoder()
             do {

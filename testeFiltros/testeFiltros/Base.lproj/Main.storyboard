@@ -299,6 +299,7 @@
                     </view>
                     <connections>
                         <outlet property="searchCollectionView" destination="xt4-4S-c9E" id="lOo-fJ-R9n"/>
+                        <outlet property="searchUserName" destination="HNA-Nr-hYS" id="tXf-Jb-krt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qah-sf-cRE" userLabel="First Responder" sceneMemberID="firstResponder"/>

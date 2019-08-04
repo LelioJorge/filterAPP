@@ -14,13 +14,10 @@ struct User: Decodable {
     var picture_medium: String
 }
 
-
-struct UserPlaylist: Decodable {
-    var id: Int
-    var title: String
-    var tracks: Tracks
-    var creator: Creator
+struct UserData: Decodable {
+    var data: [User]
 }
+
 struct Playlist: Decodable {
     var id: Int
     var title: String

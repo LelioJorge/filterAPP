@@ -11,11 +11,18 @@ import UIKit
 class UserViewControler: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
    
    
+    @IBOutlet weak var searchUserName: UISearchBar!
     @IBOutlet weak var searchCollectionView: UICollectionView!
-    
- 
+
     let apiSearch = NetworkApi()
     var users = [User]()
+    var searchUser = [User]()
+    /*
+     1 primerio eu tenho que saber o que ele ta digitaando
+     2 depois eu tenho que fazer a resquest do que ele digitou
+     3 colocamos no array
+    
+ */
 //        didSet{
 //            self.searchCollectionView.reloadData()
 //        }
@@ -25,30 +32,25 @@ class UserViewControler: UIViewController, UICollectionViewDelegate, UICollectio
         super.viewDidLoad()
         searchCollectionView.dataSource = self
         searchCollectionView.delegate = self
+        searchUserName.delegate = self
 //        apiSearch.jsonParserUser(completion: printData)
-        
-            self.apiSearch.taskUser(completion: { data in
-                self.printData(data)
-                DispatchQueue.main.async {
-                    self.searchCollectionView.reloadData()
-                }
-            })
-
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-    
-    
-    
-    
-    func printData(_ user: User){
-        self.users.append(user)
-        print(users[0].id)
+
+    func printData(_ user: UserData){
+//        if user.data.filter({$0.name.prefix(users[0].name.count) == users[0].name}){
+//
+//        }
+
+        for user in user.data {
+            self.users.append(user)
+        }
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return users.count < 1 ? 0:users.count
+        return searchUser.count < 1 ? 0:searchUser.count
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
@@ -56,7 +58,6 @@ class UserViewControler: UIViewController, UICollectionViewDelegate, UICollectio
         guard let id = cell?.id else {return}
         print(id)
 //        performSegue(withIdentifier: "eu nao sei", sender: id)
-        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "eu nao sei"{
@@ -65,14 +66,27 @@ class UserViewControler: UIViewController, UICollectionViewDelegate, UICollectio
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CollectionViewCell
-        apiSearch.requestImage(urlPath: users[indexPath.row].picture_medium, completion: { data in
+        apiSearch.requestImage(urlPath: searchUser[indexPath.row].picture_medium, completion: { data in
             DispatchQueue.main.async {
                 cell?.image = data
             }
         })
-        cell?.textName = users[indexPath.row].name
-        cell?.id = users[indexPath.row].id
+        cell?.textName = searchUser[indexPath.row].name
+        cell?.id = searchUser[indexPath.row].id
         return cell!
     }
     
+}
+extension UserViewControler: UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.apiSearch.taskUser(urlPath: "https://api.deezer.com/search/user?q=\(searchText)") { data in
+            DispatchQueue.main.async {
+                self.printData(data)
+                self.searchUser.removeAll()
+                self.searchUser = self.users.filter({$0.name.prefix(searchText.count) == searchText})
+                self.searchCollectionView.reloadData()
+            }
+            
+        }
+    }
 }
